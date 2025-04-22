@@ -1,0 +1,129 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f1f1f;
+  color: #f2f2f2;
+}
+
+.container-box {
+  max-width: 700px;
+  width: 100%;
+  background-color: #2a2a2a;
+  color: #f2f2f2;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+
+.stage {
+  background: linear-gradient(135deg, #222, #000);
+  color: white;
+  padding: 15px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#seat-map {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #333;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.seat {
+  width: 35px;
+  height: 35px;
+  margin: 6px;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+}
+
+.occupied {
+  background-color: #ff6b6b;
+  cursor: not-allowed;
+}
+
+.selected {
+  background-color: #ffd93b;
+  box-shadow: 0 0 8px #c7a600;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #f2f2f2;
+}
+
+body.dark-mode .container-box {
+  background-color: #2a2a2a;
+  color: #f2f2f2;
+}
+
+body.dark-mode #seat-map {
+  background-color: #333;
+}
+
+body.dark-mode .stage {
+  background: linear-gradient(135deg, #222, #000);
+}
+
+body.dark-mode footer {
+  color: #bbb;
+}
+
+.input-dark {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+.input-dark:focus {
+  background-color: #555;
+  border-color: #999;
+  outline: none;
+  box-shadow: 0 0 5px #888;
+}
+
+.toast-message {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff5e5e;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.toast-message.show {
+  opacity: 1;
+}
+
